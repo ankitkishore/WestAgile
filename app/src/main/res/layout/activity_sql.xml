@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SqlActivity">
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameInput"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/genderInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailInput"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="addButtonClicked"
+        android:layout_below="@+id/genderInput"
+        android:layout_margin="10dp"/>
+
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:onClick="deleteButtonClicked"
+        android:layout_below="@+id/genderInput"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:layout_below="@+id/btnAdd">
+
+    </ListView>
+
+
+
+</RelativeLayout>
