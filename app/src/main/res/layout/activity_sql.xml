@@ -10,21 +10,24 @@
         android:id="@+id/nameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
+        android:hint="Name"
+        android:layout_margin="10dp"/>
 
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/nameInput"
-        android:layout_marginTop="20dp"/>
+        android:hint="Email"
+        android:layout_margin="10dp"/>
 
     <EditText
         android:id="@+id/genderInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/emailInput"
-        android:layout_marginTop="20dp"/>
+        android:hint="Gender"
+        android:layout_margin="10dp"/>
 
     <Button
         android:id="@+id/btnAdd"

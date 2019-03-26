@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import java.util.ArrayList;
 
 public class MyDBHandler extends SQLiteOpenHelper {
@@ -65,7 +64,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     //Print out the database as a string
     public ArrayList<User> databaseToString(){
         SQLiteDatabase db =  getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_USER + " WHERE 1";
+        String query = "SELECT * FROM " + TABLE_USER;
 
         //Cursor point to a location in your result
         Cursor c = db.rawQuery(query, null);

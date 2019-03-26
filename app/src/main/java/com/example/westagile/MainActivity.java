@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,29 +52,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void randFunc(){
-        ArrayList<Integer> color = new ArrayList<Integer>();
-        color.add(Color.BLACK);
-        color.add(Color.BLUE);
-        color.add(Color.GRAY);
+
         SharedPreferences.Editor editor = sharedpreferences.edit();
 
-        Integer removeColor = sharedpreferences.getInt("color",0);
-        color.remove(removeColor);
-        int r = (int) ((Math.random()*10)%2);
-        switch (r){
-            case 0:
-                rel.setBackgroundColor(color.get(0));
-                editor.putInt("color",color.get(0));
-                editor.apply();
-                break;
-            case 1:
-                rel.setBackgroundColor(color.get(1));
-                editor.putInt("color",color.get(1));
-                editor.apply();
-                break;
-        }
-
-        Log.i("yo",((Math.random()*10)%3)+""+removeColor);
+        Random rnd = new Random();
+        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+        rel.setBackgroundColor(color);
+        editor.putInt("color",color);
+        editor.apply();
 
     }
 
