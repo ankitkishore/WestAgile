@@ -13,9 +13,9 @@ import java.util.ArrayList;
 public class ListAdapter extends BaseAdapter {
 
     private final Activity context;
-    ArrayList<User> u;
+    ArrayList<StudentDetails> u;
 
-    public ListAdapter(Activity context, ArrayList<User> u) {
+    public ListAdapter(Activity context, ArrayList<StudentDetails> u) {
         this.context = context;
         this.u = u;
     }
@@ -44,11 +44,15 @@ public class ListAdapter extends BaseAdapter {
         TextView name = rowView.findViewById(R.id.name);
         TextView gender = rowView.findViewById(R.id.gender);
         TextView email = rowView.findViewById(R.id.email);
+        TextView dob = rowView.findViewById(R.id.dob1);
+        TextView mobile = rowView.findViewById(R.id.mobile);
         Log.i("yo1",u.get(position).get_name());
 
         name.setText(u.get(position).get_name());
-        email.setText(u.get(position).get_email_id());
-        gender.setText(u.get(position).get_gender());
+        email.append(u.get(position).get_email_id());
+        gender.append(u.get(position).get_gender());
+        dob.append(u.get(position).get_dob());
+        mobile.append(u.get(position).get_mobile_no());
 
 
         return rowView;

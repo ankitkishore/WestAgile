@@ -1,18 +1,40 @@
 package com.example.westagile;
 
-public class User {
+public class StudentDetails {
     private int _id;
     private String _name;
     private String _gender;
     private String _email_id;
+    private String _dob;
+    private String _mobile_no;
 
-    public User() {
+
+    public StudentDetails() {
     }
 
-    public User(String _name, String _gender, String _email_id) {
+
+    public StudentDetails( String _name, String _gender, String _email_id, String _dob, String _mobile_no) {
         this._name = _name;
         this._gender = _gender;
         this._email_id = _email_id;
+        this._dob = _dob;
+        this._mobile_no = _mobile_no;
+    }
+
+    public String get_dob() {
+        return _dob;
+    }
+
+    public void set_dob(String _dob) {
+        this._dob = _dob;
+    }
+
+    public String get_mobile_no() {
+        return _mobile_no;
+    }
+
+    public void set_mobile_no(String _mobile_no) {
+        this._mobile_no = _mobile_no;
     }
 
     public int get_id() {
